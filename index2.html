@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+	<title>TaxiCobro</title>
+	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.2.0.css" />
+	<link rel="stylesheet" href="docs/_assets/css/jqm-docs.css" />
+	<script src="js/jquery.js"></script>
+	<script src="docs/_assets/js/jqm-docs.js"></script>
+	<script src="js/jquery.mobile-1.2.0.js"></script>
+    <script src="js/funciones.js"></script>
+    
+</head>
+<body>
+
+ <div class="ui-bar ui-bar-a">
+   <div align="center"><a href="index.html" data-transition="slidedown"><img src="logo.png" width="43" height="43"></a></div>
+
+</div>
+
+
+
+<form name="form1" id="form1">
+  <div>
+    <p align="center">Ingresa las Unidades 
+      <input id="area2" type="number"  style="text-align:center" onkeypress="return solonumeros(event)"  onkeyup="return solonumeros(event), calcular()" onfocus="this.value='';" name="unidades" value="25" tabindex="1"/>
+    
+    <div>
+	        
+	         
+    </div>
+</p></div>
+<div align="center">
+
+<div id="botonvalor" align="center" >
+	           <input name="Vertotal" data-icon="check" data-inline="true" type="button" class="ui-body-e" onClick="calcular();redondearBaja(num, digitos)" value="CALCULAR VALOR" />
+               
+    </div>
+             </br>
+    <strong>$</strong>
+    <input id="area1" name="resultado" type="text" style="text-align:center" class="ui-btn-down-e" onkeypress="return solonumeros(event)" readonly value="3600"/>
+
+ <div id="cajacheckbox" data-role="fieldcontain" align="center">
+    <fieldset data-role="controlgroup">
+	   <label> <input type="checkbox" name="nocturno" onChange="calcular()"/>Nocturno / Festivo</label>
+        <label> <input type="checkbox" name="puerta" onChange="calcular()"/>Puerta a Puerta</label>
+        <label> <input type="checkbox" name="terminal" onChange="calcular()"/>Terminal</label>
+        <label> <input type="checkbox" name="aeropuerto" onChange="calcular()"/>Aeropuerto</label>
+    </fieldset>
+</div>
+
+
+
+  </div>
+
+
+
+</form>
+
+
+
+</div>
+</body>
+</html>
